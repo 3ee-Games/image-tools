@@ -1,3 +1,3 @@
-# Image Lifter
+# Image Tools
 
-A simple python script that downloads images from a given URL and saves them to a folder.
+A simple set python scripts that aid with image editing, renaming, resizing, and input/output.
