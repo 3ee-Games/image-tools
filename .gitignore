@@ -166,3 +166,5 @@ cython_debug/
 *.webp
 *.heic
 *.jpeg
+
+tiles/
