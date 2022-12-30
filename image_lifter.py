@@ -1,3 +1,5 @@
+# Description: This script downloads all images from a given url and saves them to a folder called images
+
 import re
 import os
 import urllib.request
@@ -6,6 +8,7 @@ from pathlib import Path
 
 host = 'https://www.gutenberg.org/cache/epub/67098'
 html_request = 'https://www.gutenberg.org/cache/epub/67098/pg67098-images.html'
+
 response = urllib.request.urlopen(html_request)
 
 soup = BeautifulSoup(response, 'html.parser')

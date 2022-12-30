@@ -1,3 +1,5 @@
+#Description: Convert HEIC to PNG
+
 import os
 from PIL import Image
 from pathlib import Path
@@ -8,7 +10,7 @@ extensions_supported = ('.heic', 'heica')
 
 for files in os.listdir(images_path):
     if files.endswith(extensions_supported):
-        print("Loading: " + files)  # printing file name of desired extension
+        print("Loading: " + files)
         heif_file = pillow_heif.read_heif(os.path.join(images_path, files))
         image = Image.frombytes(
             heif_file.mode,
@@ -17,6 +19,6 @@ for files in os.listdir(images_path):
             "raw",
         )
         new_file_name = files + ".png"
-        image.save(os.path.join(images_path, files), format("png"))
+        image.save(os.path.join(images_path, files), format="png")
         print("Converted: " + new_file_name)
 
