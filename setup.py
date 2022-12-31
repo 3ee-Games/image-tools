@@ -18,7 +18,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 setup(
     name='imgtools-cli',
     version='1.0',
-    url='https://github.com/cykerway/jinja-cli',
+    url='https://github.com/3ee-Games/image-tools',
     author='3ee Games',
     author_email='ryguy@3ee.com',
     packages=find_packages(),
@@ -43,9 +43,7 @@ setup(
         'beautifulsoup4>=4.11.1',
         'urllib3>=1.26.13',
         'Pillow>=9.3.0'
-        'PyYAML',
         'argparse-ext',
-        'xmltodict',
         'pillow-heif>=0.9.0'
     ],
     extras_require={
