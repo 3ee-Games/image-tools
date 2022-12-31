@@ -19,7 +19,7 @@ setup(
     name='imgtools-cli',
     version='1.0',
     url='https://github.com/3ee-Games/image-tools',
-    author='3ee Games',
+    author='ootie',
     author_email='ryguy@3ee.com',
     packages=find_packages(),
     description='a command line interface for preparing image models;',

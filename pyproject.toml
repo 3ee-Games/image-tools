@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imgtools-cli"
+version = "1.0.1"
+authors = [
+  { name="Ryan Sadwick", email="ryguy@3ee.com" },
+]
+description = "a command line interface for preparing image models"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+imgtools = "imgtools_cli.__main__:main"
+
+[project.urls]
+"Homepage" = "https://github.com/3ee-Games/image-tools"
+"Bug Tracker" = "https://github.com/3ee-Games/image-tools/issues"
