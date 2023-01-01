@@ -7,7 +7,7 @@ from imgtools_cli.hassan_people_remover import HassanPeopleRemover
 
 ##  program name;
 prog = 'image-tools'
-current_version = '1.0.4'
+current_version = '1.0.5'
         
 def _parse_args():
 
@@ -54,8 +54,8 @@ def _parse_args():
     parser.add_argument(
         '-R', '--people-remover',
         action=HassanPeopleRemover,
-        nargs=1,
-        help='remove images if it contains more than one person: {input directory}',
+        nargs=2,
+        help='remove images if it contains more than one person: {input directory}, {path to haarcascade_frontalface_default.xml}}',
     )
 
     parser.add_argument(

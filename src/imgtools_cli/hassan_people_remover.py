@@ -2,9 +2,7 @@
 import os
 import argparse
 import cv2
-import logging
 import pathlib
-
 
 class HassanPeopleRemover(argparse.Action):
     total_files_chunked = 0
@@ -18,20 +16,15 @@ class HassanPeopleRemover(argparse.Action):
         print('%r %r %r %r' % (namespace, values, option_string, self.nargs))
         setattr(namespace, self.dest, values)
 
-        logging.basicConfig(filename='hassan.log', filemode='w',
-                            format='%(name)s - %(levelname)s - %(message)s')
-
         input_directory = values[0]
+        path_to_haarcascade = values[1]
         extensions_supported = ('.jpg', 'jpeg', 'png', 'webp')
         for file in os.listdir(input_directory):
             if file.endswith(extensions_supported):
                 img = cv2.imread(os.path.join(input_directory, file))
                 
-                
-                current_path = pathlib.Path(__file__).parent.resolve()
-                haarcascade_xml = str(current_path) + '/haarcascade_frontalface_default.xml'
                 # use face detection to count the number of people in the image
-                face_cascade = cv2.CascadeClassifier(haarcascade_xml)
+                face_cascade = cv2.CascadeClassifier(path_to_haarcascade)
 
                 # check if the image is empty or the cascade classifier failed to load
                 if img is None or face_cascade.empty():
@@ -44,6 +37,5 @@ class HassanPeopleRemover(argparse.Action):
                 if len(faces) > 1:
                     os.remove(os.path.join(input_directory, file))
                     print(f"Removed {file}")
-                    logging.warning(f"Removed {file}")
                 else:
                     print(f"{file} has only one person, keeping it")
