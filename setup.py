@@ -17,7 +17,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='imgtools-cli',
-    version='1.0.3',
+    version='1.0.4',
     url='https://github.com/3ee-Games/image-tools',
     author='3ee Games',
     author_email='ryguy@3ee.com',
@@ -45,6 +45,7 @@ setup(
         'Pillow==9.3.0',
         'argparse-ext',
         'pillow-heif==0.9.0',
+        'opencv-python'
     ],
 
     extras_require={

@@ -36,10 +36,8 @@ class DownloadImages(argparse.Action):
                 has_extension = os.path.splitext(values[0])[1].count('.') > 0
 
                 if has_extension:
-                    print('yes')
                     #remove the last part of the url:
                     absolute_uri = '/'.join(absolute_uri.split('/')[:-1])
-                   
 
                 url = '{}/{}'.format(absolute_uri, filename.string)
 
