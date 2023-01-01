@@ -1,8 +1,5 @@
-#Description: Convert HEIC to PNG
-
 import os
 from PIL import Image
-from pathlib import Path
 import pillow_heif
 import argparse
 
@@ -18,7 +15,6 @@ class HeicToPng(argparse.Action):
         setattr(namespace, self.dest, values)
         
         images_path = values[0]
-        #images_path = Path(__file__).parent.parent.resolve() / 'images'
         extensions_supported = ('.heic', 'heica')
         total_supported_files = 0
 
@@ -39,4 +35,3 @@ class HeicToPng(argparse.Action):
 
         if files is None or len(files) == 0 or total_supported_files == 0:
             print("No HEIC files found in: {}".format(images_path))
-

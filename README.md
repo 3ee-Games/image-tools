@@ -5,7 +5,7 @@ Command line interface for working processing images for model training.
 
 ## Installation
 
-create a virtual environment and install the dependencies:
+create a virtual environment and imgtools-cli through pip:
 
 ```bash
 
@@ -21,13 +21,13 @@ pip install imgtools-cli
 **Download all images from a website**
 
 ```bash
-python imgtools_cli -D https://www.gutenberg.org/cache/epub/67098/pg67098-images.html
+python -m imgtools_cli -D https://www.gutenberg.org/cache/epub/67098/pg67098-images.html
 ```
 
 **Convert HEIC to PNG**
 
 ```bash
-python imgtools_cli -P /Users/ootie/heic_files
+python -m imgtools_cli -P /Users/ootie/heic_files
 ```
 
 **Chunk large images into squares**
@@ -35,5 +35,5 @@ python imgtools_cli -P /Users/ootie/heic_files
 Easily take large images and split them into smaller squares for training.
 
 ```bash
-python imgtools_cli -C 512 /Users/ootie/input /Users/ootie/output
+python -m imgtools_cli -C 512 /Users/ootie/input /Users/ootie/output
 ```

@@ -3,12 +3,6 @@ import re
 import os
 import urllib.request
 from bs4 import BeautifulSoup
-from pathlib import Path
-from urllib.parse import urljoin
-
-from urllib.parse import unquote, urlparse
-from pathlib import PurePosixPath
-
 
 class DownloadImages(argparse.Action):
 
@@ -21,14 +15,13 @@ class DownloadImages(argparse.Action):
         print('%r %r %r %r' % (namespace, values, option_string, self.nargs))
         setattr(namespace, self.dest, values)
 
-        # html_request = 'https://www.gutenberg.org/cache/epub/67098/pg67098-images.html'
         response = urllib.request.urlopen(values[0])
+        input_directory = values[1]
 
         soup = BeautifulSoup(response, 'html.parser')
         images = soup.find_all('img')
 
         urls = [img['src'] for img in images]
-        images_path = Path(__file__).parent.parent.resolve() / 'images'
 
         for url in urls:
             filename = re.search(r'/([\w_-]+[.](jpg|gif|png|webp))$', url)
@@ -51,7 +44,7 @@ class DownloadImages(argparse.Action):
                 url = '{}/{}'.format(absolute_uri, filename.string)
 
             with urllib.request.urlopen(url) as url_image:
-                with open(os.path.join(images_path, filename.group(1)), 'wb') as file_io:
+                with open(os.path.join(input_directory, filename.group(1)), 'wb') as file_io:
                     file_io.write(url_image.read())
 
-        print('Downloaded {} images to: {}'.format(len(images), images_path))
+        print('Downloaded {} images to: {}'.format(len(images), input_directory))
