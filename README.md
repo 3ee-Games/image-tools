@@ -1,9 +1,9 @@
 # Image Tools CLI 🖼️
     
-    [![PyPI version](https://badge.fury.io/py/imgtools-cli.svg)](https://badge.fury.io/py/imgtools-cli)
-    [![Downloads](https://pepy.tech/badge/imgtools-cli)](https://pepy.tech/project/imgtools-cli)
-    [![Downloads](https://pepy.tech/badge/imgtools-cli/month)](https://pepy.tech/project/imgtools-cli)
-    [![Downloads](https://pepy.tech/badge/imgtools-cli/week)](https://pepy.tech/project/imgtools-cli)
+[![PyPI version](https://badge.fury.io/py/imgtools-cli.svg)](https://badge.fury.io/py/imgtools-cli)
+[![Downloads](https://pepy.tech/badge/imgtools-cli)](https://pepy.tech/project/imgtools-cli)
+[![Downloads](https://pepy.tech/badge/imgtools-cli/month)](https://pepy.tech/project/imgtools-cli)
+[![Downloads](https://pepy.tech/badge/imgtools-cli/week)](https://pepy.tech/project/imgtools-cli)
 
 Command line interface for pre-processing images for model training.
 
@@ -14,7 +14,7 @@ Command line interface for pre-processing images for model training.
 - Chunk large images into smaller squares
 
 _Example:_ You may want to train on this image but need to split it into smaller squares for training.
-![Chunk Images](https://github.com/3ee-Games/image-tools/blob/main/images/long.png) 
+![Chunk Images](https://github.com/3ee-Games/image-tools/blob/main/images/long.jpg) 
 
 Put it through the chunker and you get this:
 
@@ -27,7 +27,7 @@ Put it through the chunker and you get this:
 
 _Example:_ If your input images have more than one person, the image will be deleted:
 
-![ Chunked Image Example ]( https://github.com/3ee-Games/image-tools/blob/main/images/sample%20(3).jpg )
+![ Chunked Image Example ]( https://github.com/3ee-Games/image-tools/blob/main/images/sample%20(6).jpg )
 
 ## Installation
 
