@@ -7,7 +7,7 @@ from imgtools_cli.hassan_people_remover import HassanPeopleRemover
 
 ##  program name;
 prog = 'image-tools'
-current_version = '1.0.3'
+current_version = '1.0.4'
         
 def _parse_args():
 
