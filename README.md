@@ -80,10 +80,7 @@ python -m imgtools_cli -C 512 /Users/ootie/input /Users/ootie/output
 
 Uses face detection to remove images with more than one person. Helpful for cleaning source images to be used for Stable Diffusion training.
 
-Sample images: 
-- https://github.com/hassan-sd/people-remover/blob/main/images/sample%20(5).jpg
-- https://github.com/hassan-sd/people-remover/blob/main/images/sample%20(7).jpg
-- https://github.com/hassan-sd/people-remover/blob/main/images/sample%20(3).jpg
+Sample images to test with: https://github.com/hassan-sd/people-remover/tree/main/images
 
 ```bash
 python -m imgtools_cli -R /Users/ryguy/Documents/github/image-tools/images/
