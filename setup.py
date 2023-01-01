@@ -45,6 +45,7 @@ setup(
         'Pillow==9.3.0',
         'argparse-ext',
         'pillow-heif==0.9.0',
+        'opencv-python'
     ],
 
     extras_require={
