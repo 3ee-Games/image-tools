@@ -1,8 +1,6 @@
 import argparse
 import os
-from pathlib import Path
 
-import os
 from PIL import Image
 from itertools import product
 
@@ -18,21 +16,20 @@ class ImageToChunks(argparse.Action):
         setattr(namespace, self.dest, values)
 
         extensions_supported = ('.jpg', 'jpeg', 'png', 'webp')
-        images_path = Path(__file__).parent.parent.resolve() / 'images'
         total_supported_files = 0
         
         square_dimension = int(values[0])
         input_directory = values[1]
         output_directory = values[2]
 
-        for files in os.listdir(images_path):
+        for files in os.listdir(input_directory):
             if files.endswith(extensions_supported):
                 print("Loading: " + files)
                 self.chunk(square_dimension, files, input_directory, output_directory)
                 total_supported_files += 1
 
         if files is None or len(files) == 0 or total_supported_files == 0:
-            print("No image files found in: {}".format(images_path))
+            print("No image files found in: {}".format(input_directory))
 
         print("Total files chunked: {} at {} x {}.  Files saved to: {}".format(self.total_files_chunked, square_dimension, square_dimension, output_directory))
 

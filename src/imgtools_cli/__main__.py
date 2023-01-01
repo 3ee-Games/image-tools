@@ -1,15 +1,12 @@
 import argparse
 import argparse_ext
-import download
-import heic2png
-import image2chunks
+from imgtools_cli.download import DownloadImages
+from imgtools_cli.heic2png import HeicToPng
+from imgtools_cli.image2chunks import ImageToChunks
 
 ##  program name;
 prog = 'image-tools'
-current_version = '1.0.0'
-download_images = download.DownloadImages
-heic_to_png = heic2png.HeicToPng
-image_to_chunks = image2chunks.ImageToChunks
+current_version = '1.0.3'
         
 def _parse_args():
 
@@ -31,15 +28,15 @@ def _parse_args():
     ##  add download images;
     parser.add_argument(
         '-D', '--download',
-        action=download_images,
-        nargs=1,
-        help='download all images off a given website: {url};',
+        action=DownloadImages,
+        nargs=2,
+        help='download all images off a given website: {url}, {input directory};',
     )
 
     ##  add heic to png converter;
     parser.add_argument(
         '-P', '--heicpng',
-        action=heic_to_png,
+        action=HeicToPng,
         nargs=1,
         help='convert heic to png format: {input directory};',
     )
@@ -47,7 +44,7 @@ def _parse_args():
     ##  add image chunker;
     parser.add_argument(
         '-C', '--chunk',
-        action=image_to_chunks,
+        action=ImageToChunks,
         nargs=3,
         help='chunk an image into squares: {dimesion}, {input directory}, {output directory};',
     )
