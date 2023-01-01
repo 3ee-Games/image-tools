@@ -10,7 +10,9 @@ Command line interface for pre-processing images for model training.
 ## Features
 
 - Download all images from a url
+
 - Convert HEIC images to PNG
+
 - Chunk large images into smaller squares
 
 _Example:_ You may want to train on this image but need to split it into smaller squares for training.
@@ -27,7 +29,11 @@ Put it through the chunker and you get this:
 
 _Example:_ If your input images have more than one person, the image will be deleted:
 
-![ Chunked Image Example ]( https://github.com/3ee-Games/image-tools/blob/main/images/sample%20(6).jpg )
+![ Face Detection]( https://github.com/3ee-Games/image-tools/blob/main/images/faces1.jpg )
+
+_Example:_ This image will _not_ be deleted:
+
+![ Face Detection ]( https://github.com/3ee-Games/image-tools/blob/main/images/faces2.jpg )
 
 ## Installation
 
