@@ -12,10 +12,9 @@ class ImageToChunks(argparse.Action):
 
     def __call__(self, parser, namespace, values, option_string=None):
 
-        print('%r %r %r %r' % (namespace, values, option_string, self.nargs))
         setattr(namespace, self.dest, values)
 
-        extensions_supported = ('.jpg', 'jpeg', 'png', 'webp')
+        extensions_supported = ('jpg', 'jpeg', 'png', 'webp')
         total_supported_files = 0
         
         square_dimension = int(values[0])

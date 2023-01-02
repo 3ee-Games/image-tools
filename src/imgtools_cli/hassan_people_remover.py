@@ -13,7 +13,6 @@ class HassanPeopleRemover(argparse.Action):
 
     def __call__(self, parser, namespace, values, option_string=None):
 
-        print('%r %r %r %r' % (namespace, values, option_string, self.nargs))
         setattr(namespace, self.dest, values)
 
         input_directory = values[0]

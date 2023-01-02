@@ -11,7 +11,9 @@ Command line interface for pre-processing images for model training.
 
 - Download all images from a url
 
-- Convert HEIC images to PNG
+- Convert images to PNG
+
+- Resize and crop images
 
 - Chunk large images into smaller squares
 
@@ -64,12 +66,28 @@ python -m imgtools_cli -h
 python -m imgtools_cli -D https://www.gutenberg.org/cache/epub/67098/pg67098-images.html /Users/ootie/images
 ```
 
-**Convert HEIC to PNG**
+**Convert images to PNG files**
 
-```-P {output directory}```
+```-I {input directory}```
 
 ```bash
-python -m imgtools_cli -P /Users/ootie/heic_files
+python -m imgtools_cli -I /Users/ootie/image_files
+```
+
+**Resize / Crop images**
+
+```-r {input directory}, {width}, {height}, {crop_focal_point}, {dnn_model_path}```
+
+Using crop focal point:
+
+```bash
+python -m  imgtools_cli -r /Users/ootie/images 512 512 True None
+```
+
+Passing in a haar xml to focal crop faces:
+
+```bash
+python -m  imgtools_cli -r /Users/ootie/images 512 512 True /Users/ootie/models/haarcascade_frontalface_default.xml
 ```
 
 **Chunk large images into squares**
