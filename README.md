@@ -81,13 +81,13 @@ python -m imgtools_cli -I /Users/ootie/image_files
 Using crop focal point:
 
 ```bash
-python -m  imgtools_cli -r /Users/ootie/images 512 512 True None
+python -m imgtools_cli -r /Users/ootie/images 512 512 True None
 ```
 
 Passing in a haar xml to focal crop faces:
 
 ```bash
-python -m  imgtools_cli -r /Users/ootie/images 512 512 True /Users/ootie/models/haarcascade_frontalface_default.xml
+python -m imgtools_cli -r /Users/ootie/images 512 512 True /Users/ootie/models/haarcascade_frontalface_default.xml
 ```
 
 **Chunk large images into squares**
@@ -100,7 +100,7 @@ Easily take large images and split them into smaller squares for training.
 python -m imgtools_cli -C 512 /Users/ootie/input /Users/ootie/output
 ```
 
-**Hassa People Remover**
+**Hassan People Remover**
 
 Uses face detection to remove images with more than one person. Helpful for cleaning source images to be used for Stable Diffusion training.
 
