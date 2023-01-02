@@ -33,10 +33,6 @@ _Example:_ If your input images have more than one person, the image will be del
 
 ![ Face Detection]( https://github.com/3ee-Games/image-tools/blob/main/examples/faces1.jpg )
 
-_Example:_ This image will _not_ be deleted:
-
-![ Face Detection ]( https://github.com/3ee-Games/image-tools/blob/main/examples/faces2.jpg )
-
 ## Installation
 
 create a virtual environment and imgtools-cli through pip:
