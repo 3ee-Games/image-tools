@@ -7,7 +7,7 @@ from imgtools_cli.image2png import ImageConvert
 from imgtools_cli.image_resize import ImageResize
 
 prog = 'image-tools'
-current_version = '1.0.7'
+current_version = '1.0.8'
         
 def _parse_args():
 

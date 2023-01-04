@@ -17,7 +17,7 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='imgtools-cli',
-    version='1.0.7',
+    version='1.0.8',
     url='https://github.com/3ee-Games/image-tools',
     author='3ee Games',
     author_email='ryguy@3ee.com',
