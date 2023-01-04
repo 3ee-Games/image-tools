@@ -22,7 +22,7 @@ class ImageToChunks(argparse.Action):
         output_directory = values[2]
 
         for files in os.listdir(input_directory):
-            if files.endswith(extensions_supported):
+            if files.lower().endswith(extensions_supported):
                 print("Loading: " + files)
                 self.chunk(square_dimension, files, input_directory, output_directory)
                 total_supported_files += 1
