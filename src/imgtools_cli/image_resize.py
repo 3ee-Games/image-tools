@@ -26,8 +26,7 @@ class ImageResize(argparse.Action):
         total_supported_files = 0
 
         for files in os.listdir(input_directory):
-            if files.endswith(extensions_supported):
-
+            if files.lower().endswith(extensions_supported):
                 image = Image.open(os.path.join(input_directory, files))
                 width = resize_width
                 height = resize_height

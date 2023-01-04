@@ -22,7 +22,7 @@ class ImageConvert(argparse.Action):
         for files in os.listdir(input_directory):
             new_file_name = files + ".png"
 
-            if files.endswith(extensions_supported):
+            if files.lower().endswith(extensions_supported):
                 image = Image.open(os.path.join(input_directory, files))
                 rgb_image = image.convert('RGB')
                 rgb_image.save(os.path.join(input_directory, new_file_name), format="png")
